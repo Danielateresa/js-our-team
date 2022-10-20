@@ -1,0 +1,16 @@
+.container {
+    max-width: 900px;
+    margin: 3rem auto;
+}
+
+.bg_light_gray {
+    background-color: rgb(236, 236, 236);
+}
+
+h3,
+p {
+
+    background-color: white;
+    margin-bottom: 0;
+    padding: 0.5rem 0 0 0;
+}
