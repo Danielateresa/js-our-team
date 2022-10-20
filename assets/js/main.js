@@ -6,6 +6,8 @@ MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1: Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede*/
 
+
+//MILESTONE 0:
 //creo un array di oggetti con i dati forniti
 
 const studentsList = [
@@ -41,3 +43,36 @@ const studentsList = [
         Image: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
+
+//MILESTONE 1:
+//tampare su console le informazioni di nome, ruolo e la stringa della foto
+//utilizzo un ciclo for per scorrere nell'array con gli oggetti
+for (let i = 0; i < studentsList.length; i++) {
+    //seleziono il singolo studente
+    const student = studentsList[i];
+    //console.log(student);
+    //stampo in concole le informazioni nome, ruolo e stringa foto
+    console.log(student.Name);
+    console.log(student.Role);
+    console.log(student.Image);
+
+
+    //MILESTONE 2:
+    //Stampare le stesse informazioni su DOM sottoforma di stringhe
+    //creo gli elementi nella Dom
+    const card =
+        `<div class="col">
+            <h3>
+                ${student.Name}
+            </h3>
+            <p>
+                ${student.Role}
+            </p>
+            <p>
+                ${student.Image}
+            </p>
+        </div>`
+
+    const ContainerEl = document.querySelector('.container');
+    ContainerEl.insertAdjacentHTML('afterend', card);
+}
