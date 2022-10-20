@@ -62,14 +62,14 @@ for (let i = 0; i < studentsList.length; i++) {
     //creo gli elementi nella Dom
     const card =
         `<div class="col card  p-0  border-0 p-3 bg_light_gray text-center">
-            <h3>
+        <img class ="img-fluid" src="${student.Image}">
+        </img>
+            <h4>
                 ${student.Name}
-            </h3>
+            </h4>
             <p>
                 ${student.Role}
             </p>
-            <img class ="img-fluid" src="${student.Image}">
-            </img>
         </div>`
 
     const rowEl = document.querySelector('.row');
