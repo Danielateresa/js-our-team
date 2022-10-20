@@ -15,32 +15,32 @@ const studentsList = [
     {
         Name: 'Wayne Barnett',
         Role: 'Founder & CEO',
-        Image: `<img class ="img-fluid" src="./assets/img/wayne-barnett-founder-ceo.jpg" alt="">`,
+        Image: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
     {
         Name: 'Angela Caroll',
         Role: 'Chief Editor',
-        Image: `<img class ="img-fluid" src="./assets/img/angela-caroll-chief-editor.jpg" alt="">`,
+        Image: './assets/img/angela-caroll-chief-editor.jpg',
     },
     {
         Name: 'Waleter gordon',
         Role: 'Chief Editor',
-        Image: `<img class ="img-fluid" src="./assets/img/walter-gordon-office-manager.jpg" alt="">`,
+        Image: './assets/img/walter-gordon-office-manager.jpg',
     },
     {
         Name: 'Angela lopez',
         Role: 'Social Media Manager',
-        Image: `<img class ="img-fluid" src="./assets/img/angela-lopez-social-media-manager.jpg" alt="">`,
+        Image: './assets/img/angela-lopez-social-media-manager.jpg',
     },
     {
         Name: 'Scott Estrada',
         Role: 'Developer',
-        Image: `<img class ="img-fluid" src="./assets/img/scott-estrada-developer.jpg" alt="">`,
+        Image: './assets/img/scott-estrada-developer.jpg',
     },
     {
         Name: 'Barbara Ramos',
         Role: 'Grafic designer',
-        Image: `<img class ="img-fluid" src="./assets/img/barbara-ramos-graphic-designer.jpg" alt="">`,
+        Image: './assets/img/barbara-ramos-graphic-designer.jpg',
     }
 ]
 
@@ -68,9 +68,8 @@ for (let i = 0; i < studentsList.length; i++) {
             <p>
                 ${student.Role}
             </p>
-            <p>
-                ${student.Image}
-            </p>
+            <img class ="img-fluid" src="${student.Image}">
+            </img>
         </div>`
 
     const rowEl = document.querySelector('.row');
