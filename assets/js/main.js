@@ -10,7 +10,7 @@ BONUS 2: Organizzare i singoli membri in card/schede*/
 //MILESTONE 0:
 //creo un array di oggetti con i dati forniti
 
-const studentsList = [
+const teamList = [
 
     {
         Name: 'Wayne Barnett',
@@ -47,14 +47,20 @@ const studentsList = [
 //MILESTONE 1:
 //tampare su console le informazioni di nome, ruolo e la stringa della foto
 //utilizzo un ciclo for per scorrere nell'array con gli oggetti
-for (let i = 0; i < studentsList.length; i++) {
-    //seleziono il singolo studente
-    const student = studentsList[i];
-    //console.log(student);
+for (let i = 0; i < teamList.length; i++) {
+    //seleziono il singolo worker
+    let worker = teamList[i];
+    //console.log(worker);
     //stampo in concole le informazioni nome, ruolo e stringa foto
-    console.log(student.Name);
-    console.log(student.Role);
-    console.log(student.Image);
+    //console.log(worker.Name);
+    //console.log(worker.Role);
+    //console.log(worker.Image);
+
+    for (let key in worker) {
+        let workerInfo = worker[key];
+        console.log(key + ': ' + workerInfo);
+    }
+
 
 
     //MILESTONE 2:
@@ -62,13 +68,13 @@ for (let i = 0; i < studentsList.length; i++) {
     //creo gli elementi nella Dom
     const card =
         `<div class="col card  p-0  border-0 p-3 bg_light_gray text-center">
-        <img class ="img-fluid" src="${student.Image}">
+        <img class ="img-fluid" src="${worker.Image}">
         </img>
             <h4>
-                ${student.Name}
+                ${worker.Name}
             </h4>
             <p>
-                ${student.Role}
+                ${worker.Role}
             </p>
         </div>`
 
