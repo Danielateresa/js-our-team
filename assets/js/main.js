@@ -13,34 +13,34 @@ BONUS 2: Organizzare i singoli membri in card/schede*/
 const teamList = [
 
     {
-        Name: 'Wayne Barnett',
-        Role: 'Founder & CEO',
-        Image: './assets/img/wayne-barnett-founder-ceo.jpg',
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        image: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
     {
-        Name: 'Angela Caroll',
-        Role: 'Chief Editor',
-        Image: './assets/img/angela-caroll-chief-editor.jpg',
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
+        image: './assets/img/angela-caroll-chief-editor.jpg',
     },
     {
-        Name: 'Waleter gordon',
-        Role: 'Chief Editor',
-        Image: './assets/img/walter-gordon-office-manager.jpg',
+        name: 'Waleter gordon',
+        role: 'Chief Editor',
+        image: './assets/img/walter-gordon-office-manager.jpg',
     },
     {
-        Name: 'Angela lopez',
-        Role: 'Social Media Manager',
-        Image: './assets/img/angela-lopez-social-media-manager.jpg',
+        name: 'Angela lopez',
+        role: 'Social Media Manager',
+        image: './assets/img/angela-lopez-social-media-manager.jpg',
     },
     {
-        Name: 'Scott Estrada',
-        Role: 'Developer',
-        Image: './assets/img/scott-estrada-developer.jpg',
+        name: 'Scott Estrada',
+        role: 'Developer',
+        image: './assets/img/scott-estrada-developer.jpg',
     },
     {
-        Name: 'Barbara Ramos',
-        Role: 'Grafic designer',
-        Image: './assets/img/barbara-ramos-graphic-designer.jpg',
+        name: 'Barbara Ramos',
+        role: 'Grafic designer',
+        image: './assets/img/barbara-ramos-graphic-designer.jpg',
     }
 ]
 
@@ -52,9 +52,9 @@ for (let i = 0; i < teamList.length; i++) {
     let worker = teamList[i];
     //console.log(worker);
     //stampo in concole le informazioni nome, ruolo e stringa foto
-    //console.log(worker.Name);
-    //console.log(worker.Role);
-    //console.log(worker.Image);
+    //console.log(worker.name);
+    //console.log(worker.role);
+    //console.log(worker.image);
 
     for (let key in worker) {
         let workerInfo = worker[key];
@@ -68,13 +68,13 @@ for (let i = 0; i < teamList.length; i++) {
     //creo gli elementi nella Dom
     const card =
         `<div class="col card  p-0  border-0 p-3 bg_light_gray text-center">
-        <img class ="img-fluid" src="${worker.Image}">
+        <img class ="img-fluid" src="${worker.image}">
         </img>
             <h4>
-                ${worker.Name}
+                ${worker.name}
             </h4>
             <p>
-                ${worker.Role}
+                ${worker.role}
             </p>
         </div>`
 
