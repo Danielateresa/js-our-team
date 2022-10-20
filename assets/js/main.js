@@ -15,32 +15,32 @@ const studentsList = [
     {
         Name: 'Wayne Barnett',
         Role: 'Founder & CEO',
-        Image: 'wayne - barnett - founder - ceo.jpg',
+        Image: `<img src="./assets/img/angela-caroll-chief-editor.jpg" alt="">`,
     },
     {
         Name: 'Angela',
         Role: 'Chief Editor',
-        Image: 'angela-caroll-chief-editor.jpg',
+        Image: `<img src="./assets/img/angela-lopez-social-media-manager.jpg" alt="">`,
     },
     {
         Name: 'Waleter gordon',
         Role: 'Chief Editor',
-        Image: 'walter-gordon-office-manager.jpg',
+        Image: `<img src="./assets/img/barbara-ramos-graphic-designer.jpg" alt="">`,
     },
     {
         Name: 'Waleter gordon',
         Role: 'Social Media Manager',
-        Image: 'angela-lopez-social-media-manager.jpg',
+        Image: `<img src="./assets/img/scott-estrada-developer.jpg" alt="">`,
     },
     {
         Name: 'Scott Estrada',
         Role: 'Developer',
-        Image: 'scott-estrada-developer.jpg',
+        Image: `<img src="./assets/img/walter-gordon-office-manager.jpg" alt="">`,
     },
     {
         Name: 'Barbara Ramos',
         Role: 'Grafic designer',
-        Image: 'barbara-ramos-graphic-designer.jpg',
+        Image: `<img src="./assets/img/wayne-barnett-founder-ceo.jpg" alt="">`,
     }
 ]
 
@@ -61,7 +61,7 @@ for (let i = 0; i < studentsList.length; i++) {
     //Stampare le stesse informazioni su DOM sottoforma di stringhe
     //creo gli elementi nella Dom
     const card =
-        `<div class="col">
+        `<div class="col card">
             <h3>
                 ${student.Name}
             </h3>
@@ -73,6 +73,6 @@ for (let i = 0; i < studentsList.length; i++) {
             </p>
         </div>`
 
-    const ContainerEl = document.querySelector('.container');
-    ContainerEl.insertAdjacentHTML('afterend', card);
+    const rowEl = document.querySelector('.row');
+    rowEl.insertAdjacentHTML('beforeend', card);
 }
